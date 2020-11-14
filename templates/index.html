@@ -1,0 +1,19 @@
+{% extends 'navigation.html' %}
+
+{% block title %} Index {% endblock title %}
+
+{% block body %}
+<div class="container">
+
+ <ul>
+  {% for post in posts %}
+  <li>
+   {{post.title}}
+  </li>
+  {% endfor %}
+ </ul>
+
+</div>
+
+{% endblock body %}
+
