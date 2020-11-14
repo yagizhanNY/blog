@@ -4,14 +4,39 @@
 
 {% block body %}
 <div class="container">
+    <div class="row mt-4">
+        <div class="col-4">
+        <h5>Kategoriler</h5>
+        <ul>
+            <li>
+                Python
+            </li>
+            <li>
+                C#
+            </li>
+        </ul>
+    </div>
+    {% for post in posts %}
+    <div class="col-8">
+        <div class="row">
+            <h4>{{post.title}}</h4>
+        </div>
+        <hr/>
+        <div class="row">
+            {{post.content}}
+        </div>
+        <div class="row post-date flex-row-reverse">
+            {{post.created_date}}
+        </div>
+        <div class="row post-author flex-row-reverse">
+            {{post.author}}
+        </div>
+        <hr class="post-break">
+    </div>
+    </div>
 
- <ul>
-  {% for post in posts %}
-  <li>
-   {{post.title}}
-  </li>
-  {% endfor %}
- </ul>
+    
+    {% endfor %}
 
 </div>
 

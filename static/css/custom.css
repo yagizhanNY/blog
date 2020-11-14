@@ -1,0 +1,15 @@
+.post-date{
+font-size: small;
+color: #0212FF;
+margin-top: 5px;
+}
+
+.post-author{
+font-size: smaller;
+font-style: italic;
+}
+
+.post-break{
+border: 5px solid grey;
+border-radius: 5px;
+}
