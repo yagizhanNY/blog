@@ -1,6 +1,6 @@
 .post-date{
 font-size: small;
-color: #0212FF;
+color: #8b8585;
 margin-top: 5px;
 }
 
@@ -12,4 +12,10 @@ font-style: italic;
 .post-break{
 border: 5px solid grey;
 border-radius: 5px;
+}
+
+.index-image{
+    height: 30;
+    width: 30;
+    border-radius: 5px;
 }

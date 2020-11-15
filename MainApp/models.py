@@ -15,5 +15,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_created=True, null=False)
     author = models.CharField(max_length=100, null=False)
     category = models.OneToOneField(Category, on_delete=models.CASCADE)
+    image_url = models.TextField(null=True)
+    image_text = models.CharField(max_length=100, null=True)
     def __str__(self):
         return self.title

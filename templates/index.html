@@ -1,44 +1,43 @@
-{% extends 'navigation.html' %}
-
-{% block title %} Index {% endblock title %}
-
-{% block body %}
+{% extends 'navigation.html' %} {% block title %} Index {% endblock title %} 
+{%block body %}
 <div class="container">
-    <div class="row mt-4">
-        <div class="col-4">
-        <h5>Kategoriler</h5>
-        <ul>
-            <li>
-                Python
-            </li>
-            <li>
-                C#
-            </li>
-        </ul>
+  <div class="row mt-4">
+    <div class="col-4">
+      <h5>Kategoriler</h5>
+      <ul>
+        {% for category in categories %}
+        <li>
+          <a href="">{{category.name}}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
     {% for post in posts %}
     <div class="col-8">
-        <div class="row">
-            <h4>{{post.title}}</h4>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="{{post.image_url}}" alt="{{post.image_text}}" class="index-image"/>
+          </div>
+          <hr />
+          <div class="row">
+            <h3>{{post.title}}</h3>
+          </div>
         </div>
-        <hr/>
-        <div class="row">
-            {{post.content}}
+        <div class="col">
+          <div class="row">
+            <img src="{{post.image_url}}" alt="{{post.image_text}}" class="img-thumbnail"/>
+          </div>
+          <hr />
+          <div class="row">
+            <h3>{{post.title}}</h3>
+          </div>
         </div>
-        <div class="row post-date flex-row-reverse">
-            {{post.created_date}}
-        </div>
-        <div class="row post-author flex-row-reverse">
-            {{post.author}}
-        </div>
-        <hr class="post-break">
+      </div>
     </div>
-    </div>
+  </div>
 
-    
-    {% endfor %}
-
+  {% endfor %}
 </div>
 
 {% endblock body %}
-
