@@ -1,1 +1,5 @@
+#Secret file
 blog/secrets.py
+
+#Databse file
+db.sqlite3
